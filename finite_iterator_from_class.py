@@ -1,6 +1,6 @@
 class EvenNumbers2:
-    def __init__(self):
-        self.num = 0
+    # def __init__(self):
+    #     self.num = 0
 
     def __iter__(self):
         self.num = 0
