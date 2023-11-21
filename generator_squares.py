@@ -8,6 +8,16 @@ def square_numbers():
         current_number += 1
 
 
+def square_numbers_limited(limit):
+    current_number = 1
+    while True:
+        return_value = current_number * current_number
+        if return_value > limit:
+            return
+        yield return_value
+        current_number += 1
+
+
 if __name__ == '__main__':
     count = 10
     for x in square_numbers():
@@ -15,3 +25,6 @@ if __name__ == '__main__':
         count -= 1
         if count < 0:
             break
+
+    for y in square_numbers_limited(100):
+        print(y)
