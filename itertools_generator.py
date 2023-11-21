@@ -1,8 +1,8 @@
 import itertools
 
 if __name__ == '__main__':
-    all_squares = (x * x for x in itertools.islice(itertools.count(), 1, None))
-    all_evens = (2 * x for x in itertools.islice(itertools.count(), 1, None))
+    all_squares = (x * x for x in itertools.count(1))
+    all_evens = (2 * x for x in itertools.count(1))
     zipped = (x for sublist in zip(all_squares, all_evens) for x in sublist)
     count = 10
     for x in zipped:
